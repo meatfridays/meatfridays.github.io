@@ -2,6 +2,7 @@ body {
   display: flex;
   font-family: Garamond, serif;
   justify-content: center;
+  align-items: center;
   color: #f0f0f0;
   background-color: #0f0f0f;
 }
