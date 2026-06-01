@@ -9,19 +9,20 @@
 </head>
 <body>
     <div class="introDiv">
-    <h1>Meat Friday Calculator!</h1>
-    <h3>Feasting on Fridays? Here's your go-to preparation!<br>Input the Easter date of the year to load!</h3>
-    <p>Calculates all Meat Fridays in that year.<br>(Made with love for Catholics across the globe)</p>
+    <h1>Meat Friday Calculator</h1>
+    <h3>Feasting on Fridays? Here's your go-to calculator.<br></h3>
     </div>
-    <form>
-        <label for="easter">Input Easter Date: </label> <br>
-        <input type="date" id="easter" name="easter"> <br>
-        <button type="submit">Submit</button>
-    </form> <br>
-    <div class="meatFridayDiv">
+    
+    <div class="meatFridayDiv"><form id="easterForm">
+        <label id="easterLabel" style="font-size: 1.5rem;">Input Easter Date: </label>
+        <input type="date" id="easter" name="easter" class="formInput">
+        <button type="submit" id="submitButton" class="formInput" style="font-size: 1rem;">Submit</button>
+    </form>
+        
     <h2>MEAT FRIDAYS: (DD/MM)</h2>
-    <h3 id="meatFridays">Meat Fridays here...</h3>
+    <h3 id="meatFridays">Meat Fridays appear after submission...</h3>
     </div> <br>
+    
     <p>made with love by NH</p>
     <script src="https://meatfridays.github.io/script.js"></script>
 </body>
