@@ -1,28 +1,11 @@
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 
-const easter = params.get("easter");
 const list = document.getElementById("meatFridays");
 const form = document.getElementById("easterForm");
 const inputBox = document.getElementById("easter");
+var easter, easterDD, easterMM, year;
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const easter = inputBox.value;
-    let easterDD, easterMM, year;
-    if (inputBox.type === "date") {
-        year = parseInt(easter.slice(0, 4));
-        easterMM = parseInt(easter.slice(5, 7)) - 1;
-        easterDD = parseInt(easter.slice(8, 10));
-    } 
-    else {
-        easterDD = parseInt(easter.slice(0, 2));
-        easterMM = parseInt(easter.slice(2, 4)) - 1;
-        year = parseInt(easter.slice(4, 8));
-    }
-    console.log(year, easterMM, easterDD);
-    checkFridays();
-});
 const solemnities = [
     "the Blessed Virgin Mary",
     "the Epiphany of Our Lord",
@@ -66,7 +49,22 @@ function switchInput() {
         console.log("Switched to date")
     }
 }
-
+function submit() {
+    console.log(inputBox.type);
+    console.log(inputBox.value);
+    easter = inputBox.value;
+    if (inputBox.type === "date") {
+        year = parseInt(easter.slice(0, 4));
+        easterMM = parseInt(easter.slice(5, 7)) - 1;
+        easterDD = parseInt(easter.slice(8, 10));
+    } 
+    else if (inputBox.type === "text") {
+        easterDD = parseInt(easter.slice(0, 2));
+        easterMM = parseInt(easter.slice(2, 4)) - 1;
+        year = parseInt(easter.slice(4, 8));
+    }
+    checkFridays()
+}
 function checkFridays() {
     list.innerHTML = "";
     for (let i = 0; i < len; i++) {
