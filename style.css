@@ -14,6 +14,7 @@ body {
   border: 2px solid #ffbd2e;
   border-radius: 10px;
   margin: 20px;
+  padding: 0px 20px;
 }
 .meatFridayDiv {
   color: #424242;
@@ -21,4 +22,5 @@ body {
   border: 2px solid #ffbd2e;
   border-radius: 10px;
   margin: 20px;
+  padding: 0px 20px;
 }
