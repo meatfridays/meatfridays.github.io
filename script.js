@@ -49,7 +49,7 @@ function checkFridays() {
             if (day === 5) { // Friday
                 const dd = date.getDate();
                 const mm = date.getMonth() + 1;
-                text.innerHTML += `Solemnity of ${solemnities[i]}: ${dd}/${mm}<br>`;
+                text.innerHTML += `${dd}/${mm} (Solemnity of ${solemnities[i]})<br>`;
             }
         } else {
             const solemnityDD = parseInt(
@@ -63,7 +63,7 @@ function checkFridays() {
             );
             const day = date.getDay();
             if (day === 5) {
-                text.innerHTML += `Solemnity of ${solemnities[i]}: ${solemnityDD}/${solemnityMM + 1}<br>`;
+                text.innerHTML += `${solemnityDD}/${solemnityMM + 1} (Solemnity of ${solemnities[i]})<br>`;
             }
         }
     }
