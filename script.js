@@ -1,9 +1,9 @@
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const easter = params.get("easter");
-const easterDD = parseInt(easter.slice(0, 2));
-const easterMM = parseInt(easter.slice(2, 4)) - 1;
-const year = parseInt(easter.slice(4, 8));
+const easterDD = parseInt(easter.slice(8, 10));
+const easterMM = parseInt(easter.slice(5, 7)) - 1;
+const year = parseInt(easter.slice(0, 4));
 const solemnities = [
     "the Blessed Virgin Mary",
     "the Epiphany of Our Lord",
