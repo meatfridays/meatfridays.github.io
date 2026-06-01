@@ -7,7 +7,7 @@ body {
   color: #f0f0f0;
   background-color: #21294f;
 }
-introDiv {
+.introDiv {
   text-align: center;
   color: #424242
   background color: #b5d4ff;
@@ -15,7 +15,7 @@ introDiv {
   border-radius: 10px;
   padding: 20px;
 }
-meatFridayDiv {
+.meatFridayDiv {
   color: #424242
   background color: #b5d4ff;
   border: 2px #ffbd2e;
