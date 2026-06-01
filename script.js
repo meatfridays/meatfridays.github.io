@@ -1,9 +1,20 @@
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
+
+const list = document.getElementById("meatFridays");
+const inputBox = document.getElementById("easter");
 const easter = params.get("easter");
-const easterDD = parseInt(easter.slice(8, 10));
-const easterMM = parseInt(easter.slice(5, 7)) - 1;
-const year = parseInt(easter.slice(0, 4));
+// for date inputs
+if (inputBox.type === "date") {
+    var easterDD = parseInt(easter.slice(8, 10));
+    var easterMM = parseInt(easter.slice(5, 7)) - 1;
+    var year = parseInt(easter.slice(0, 4));
+} // text inputs
+else if (inputBox.type === "text") {
+    var easterDD = parseInt(easter.slice(0, 2));
+    var easterMM = parseInt(easter.slice(2, 4)) - 1;
+    var year = parseInt(easter.slice(4, 8));
+} 
 const solemnities = [
     "the Blessed Virgin Mary",
     "the Epiphany of Our Lord",
@@ -32,11 +43,24 @@ const solemnityDates = [
     "0812",
     "2512"
 ];
-
 const len = solemnities.length;
-const text = document.getElementById("meatFridays");
+
+function switchInput() {
+    if (inputBox.type === "date") {
+        inputBox.type = "text";
+        inputBox.placeholder = "DDMMYYYY"
+        inputBox.value = ""
+        console.log("Switched to text")
+    } else if (inputBox.type === "text") {
+        inputBox.type = "date";
+        inputBox.placeholder = ""
+        inputBox.value = ""
+        console.log("Switched to date")
+    }
+}
+
 function checkFridays() {
-    text.innerHTML = "";
+    list.innerHTML = "";
     for (let i = 0; i < len; i++) {
         if (i === 4 || i === 5) {
             const offsetDays = parseInt(solemnityDates[i].slice(0, 2));
@@ -49,7 +73,7 @@ function checkFridays() {
             if (day === 5) { // Friday
                 const dd = date.getDate();
                 const mm = date.getMonth() + 1;
-                text.innerHTML += `${dd}/${mm} (Solemnity of ${solemnities[i]})<br>`;
+                list.innerHTML += `${dd}/${mm} (Solemnity of ${solemnities[i]})<br>`;
             }
         } else {
             const solemnityDD = parseInt(
@@ -63,7 +87,7 @@ function checkFridays() {
             );
             const day = date.getDay();
             if (day === 5) {
-                text.innerHTML += `${solemnityDD}/${solemnityMM + 1} (Solemnity of ${solemnities[i]})<br>`;
+                list.innerHTML += `${solemnityDD}/${solemnityMM + 1} (Solemnity of ${solemnities[i]})<br>`;
             }
         }
     }
