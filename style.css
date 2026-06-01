@@ -5,22 +5,47 @@ body {
   min-height: 100vh;
   align-items: center;
   color: #f0f0f0;
-  background-color: #21294f;
+  background-color: #2e2e2e;
 }
 .introDiv {
   text-align: center;
-  color: #424242;
-  background-color: #b5d4ff;
-  border: 2px solid #ffbd2e;
-  border-radius: 10px;
+  color: #e3e3e1;
+  background-color: #2B4593;
   margin: 20px;
   padding: 0px 20px;
+  box-shadow: 10px 10px 5px black;
+  text-shadow: 2px 2px 3px black; 
 }
 .meatFridayDiv {
-  color: #424242;
-  background-color: #b5d4ff;
-  border: 2px solid #ffbd2e;
-  border-radius: 10px;
+  color: #e3e3e1;
+  background-color: #545454;
   margin: 20px;
-  padding: 0px 20px;
+  padding: 20px 20px;
+  box-shadow: 10px 10px 5px black;
+  text-shadow: 2px 2px 3px black;
+  border-radius: 20px;
+}
+#easterForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5e5e5e;
+  padding: 20px;
+  border-radius: 20px;
+}
+.formInput {
+  background-color: #8a8a8a;
+  border: none;
+  color: #e3e3e1;
+  padding: 8px 16px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 6px 3px;
+  cursor: pointer;
+  box-shadow: 5px 5px 2.5px black;
+  transition: filter 0.3s ease; 
+}
+.formInput:hover {
+  filter: brightness(80%); 
 }
