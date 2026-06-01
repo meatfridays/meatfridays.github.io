@@ -7,7 +7,6 @@ body {
   color: #f0f0f0;
   background-color: #2e2e2e;
 }
-
 #introDiv {
   text-align: center;
   color: #e3e3e1;
@@ -18,7 +17,6 @@ body {
   text-shadow: 2px 2px 3px black;
   
 }
-
 #meatFridayDiv {
   color: #e3e3e1;
   background-color: #545454;
@@ -28,13 +26,12 @@ body {
   text-shadow: 2px 2px 3px black;
   border-radius: 20px;
 }
-
 #easterForm {
 display: flex;
 flex-direction: column;
 align-items: center;
 background-color: #5e5e5e;
-padding: 20px;
+padding: 20px 20px 0px;
 border-radius: 20px;
 
 
@@ -56,7 +53,6 @@ border-radius: 20px;
 .formInput:hover {
   filter: brightness(80%); 
 }
-
 #aboutDiv {
   text-align: center;
   color: #e3e3e1;
