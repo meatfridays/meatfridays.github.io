@@ -13,7 +13,8 @@ body {
   font-family: Garamond, serif;
 }
 #introDiv {
-  width: 60%;
+  width: 70%;
+  max-width: 400px;
   text-align: center;
   color: #e3e3e1;
   background-color: #2B4593;
@@ -24,7 +25,8 @@ body {
   
 }
 #meatFridayDiv {
-  width: 60%;
+  width: 70%;
+  max-width: 400px;
   color: #e3e3e1;
   background-color: #545454;
   margin: 20px;
@@ -60,7 +62,8 @@ border-radius: 20px;
   filter: brightness(80%); 
 }
 #aboutDiv {
-  width: 60%;
+  width: 70%;
+  max-width: 400px;
   text-align: center;
   color: #e3e3e1;
   background-color: #545454;
